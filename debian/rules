@@ -43,7 +43,7 @@ DEB_COPYRIGHT_CHECK_IGNORE_REGEX = ^data/logo_.*\.png|debian/(changelog|copyrigh
 
 # Needed (always/often/seldom) at runtime
 python-deps = sugar3 gi cairo telepathy
-gir-deps = gtk-3.0
+gir-deps = glib-2.0 gtk-3.0
 CDBS_DEPENDS_$(pkg) = python
 CDBS_DEPENDS_$(pkg) +=, $(patsubst %,$(comma) python-%,$(python-deps))
 CDBS_DEPENDS_$(pkg) +=, $(patsubst %,$(comma) gir1.2-%,$(gir-deps))
